@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'haml'
+# font-awesome
+gem 'font-awesome-sass', '~> 4.0.2'
 
 group :test do
   gem "cucumber-rails", require: false

@@ -19,5 +19,14 @@ module TwitterApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    # Test framework
+    config.generators.test_framework :rspec, fixture: true
+    config.generators do |g|
+      g.fixture_replacement :machinist
+      g.view_specs false
+      g.helper_specs false
+      g.assets false
+      g.helper false
+    end
   end
 end

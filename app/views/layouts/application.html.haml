@@ -1,9 +1,19 @@
 !!!
 %html
-%head
-%title TwitterApp
-= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-= javascript_include_tag 'application', 'data-turbolinks-track' => true
-= csrf_meta_tags
-%body
-= yield
+  %head
+    %title Workshop App
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    #wrap
+      %header
+        = render 'layouts/navigation'
+
+      .main-container#main-container
+        .row
+          .col-xs-12
+            = yield
+
+
+    = render 'layouts/footer'
