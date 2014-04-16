@@ -37,6 +37,7 @@ group :test do
   gem "machinist", ">= 2.0"
   gem 'database_cleaner'
   gem 'launchy'
+  gem "selenium-webdriver"
 end
 
 group :development, :test do
