@@ -1,0 +1,9 @@
+.row
+  .col-lg-6.col-lg-push-3
+    .well.text-center
+      %h2 My todos
+
+    .row
+      %table.table.table-bordered.table-striped
+        = render partial: 'todo', collection: @todos
+
