@@ -10,6 +10,8 @@ module NavigationHelpers
 
       when /the home\s?page/
         '/'
+      when /the todos page/
+        todos_path
 
       else
         begin
