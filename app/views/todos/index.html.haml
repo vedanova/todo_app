@@ -1,9 +1,11 @@
+.well.text-center
+  %h2 My todos
+
 .row
-  .col-lg-6.col-lg-push-3
-    .well.text-center
-      %h2 My todos
+  %table.table.table-bordered.table-striped#todos
+    = render partial: 'todo', collection: @todos
 
-    .row
-      %table.table.table-bordered.table-striped
-        = render partial: 'todo', collection: @todos
-
+= form_for @todo, class: 'form form-horizontal' do |f|
+  = f.label :name, "Add Todo"
+  = f.text_field :name, class: 'input-lg'
+  = f.submit 'Add todo', class: 'btn btn-primary'
