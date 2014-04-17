@@ -23,3 +23,13 @@ Then(/^I should see "([^"]*)" in the todo list$/) do |name|
     page.should have_content name
   end
 end
+
+And(/^I delete the first todo$/) do
+  within('#todos tr:nth-child(1)') do
+    click_on 'Delete'
+  end
+end
+
+Then(/^I should not see the todo anymore$/) do
+  page.should_not have_content "Todo 1"
+end

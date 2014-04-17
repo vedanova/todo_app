@@ -9,5 +9,5 @@ require 'machinist/active_record'
 #   end
 
 Todo.blueprint do
-  # Attributes here
+  name {'Todo'}
 end

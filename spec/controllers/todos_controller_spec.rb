@@ -22,9 +22,17 @@ describe TodosController do
       end.to change(Todo, :count).by(1)
       response.should redirect_to todos_path
     end
+  end
 
+  describe 'Post destroy' do
 
-
+    it 'should destroy the todo and redirct to indx' do
+      @todo = Todo.make!
+      expect do
+        delete :destroy, id: @todo.id
+      end.to change(Todo, :count).by(-1)
+      response.should redirect_to todos_path
+    end
   end
 
 end
